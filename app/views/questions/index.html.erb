@@ -9,5 +9,7 @@
         '/questions/' + question.to_param,
         method: :delete %>
     </td><br>
+        <td><%= link_to 'Edit',
+        '/questions/' + question.to_param + '/edit' %></td>
   </tr>
 <%- end -%>
