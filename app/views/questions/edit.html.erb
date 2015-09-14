@@ -1,21 +1,7 @@
 
-<%= form_for :question, url:{action: "update"} do |f| %>
-  <p>
-    <%= f.label "Name" %><br>
-    <%= f.text_field :asker_name%>
-  </p>
+<h1>Editing question</h1>
 
-  <p>
-   <%= f.label "Question" %><br>
-   <%= f.text_field :title %>
-  <p>
+<%= render 'form' %>
 
-  <p>
-    <%= f.label "description" %><br>
-    <%= f.text_area :body%>
-  <p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= link_to 'Show', @question %> |
+<%= link_to 'Back', questions_path %>
