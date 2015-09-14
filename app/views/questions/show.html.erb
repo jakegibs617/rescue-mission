@@ -1,0 +1,49 @@
+<ul>
+  <li class="question_name"> <%= @question.asker_name %></li>
+    <li class="question_name"><img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="42" width="42"></li>
+  <table class="info_table">
+  <tr>
+    <th>Title:</th>
+    <td> <%= @question.title %></td>
+  </tr>
+  <tr>
+    <th>Body: </th>
+    <td><%= @question.body %></td>
+  </tr>
+  <tr>
+    <th>User:</th>
+    <td><%= @question.asker_name %></td>
+  </tr>
+
+</table>
+</ul>
+
+<ul>
+  <a href="/questions/<%= @question.id %>/answers/new">Add a Answer</a><br>
+  <a href="/questions/new">Add a New Question</a>
+</ul>
+
+<ul>
+  <br>
+  <table class="answer_table">
+
+    <% @answers.each do |answer|%>
+      <tr>
+        <img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="24" width="24">
+        <th><img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="24" width="24"></th>
+
+      </tr>
+      <tr >
+        <th> Name: </th>
+        <td><%= answer.name %> </td>
+      </tr>
+      <tr >
+        <th >Body:</th>
+        <td ><%= answer.body %></td>
+      </tr>
+
+      </tr>
+      <% end %>
+  </tr>
+</table>
+</ul>

@@ -1,0 +1,13 @@
+<h3>List of Questions:</h3>
+
+
+<%- @questions.each do |question| -%>
+  <tr>
+    <td><a href="/questions/<%= question.id %>" ><%= question.title %></a></td>
+    <td>||
+      <%= link_to 'Delete',
+        '/questions/' + question.to_param,
+        method: :delete %>
+    </td><br>
+  </tr>
+<%- end -%>
