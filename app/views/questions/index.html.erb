@@ -1,15 +1,18 @@
 <h3>List of Questions:</h3>
 
-
 <%- @questions.each do |question| -%>
-  <tr>
-    <td><a href="/questions/<%= question.id %>" ><%= question.title %></a></td>
-    <td>||
-      <%= link_to 'Delete',
-        '/questions/' + question.to_param,
-        method: :delete %>
-    </td><br>
-        <td><%= link_to 'Edit',
-        '/questions/' + question.to_param + '/edit' %></td>
-  </tr>
+
+  <table>
+    <tbody>
+
+          <%= link_to 'Edit', '/questions/' + question.to_param + '/edit' %>
+          <div class="monkey"><%= link_to 'Delete', '/questions/' + question.to_param, method: :delete %></div>
+      <tr>
+        <td>
+          <a href="/questions/<%= question.id %>"><%= question.title %></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 <%- end -%>

@@ -24,8 +24,8 @@
 
  a {
    text-decoration: none;
-   color: blue;
-   font-weight: lighter;
+   color: #2d5972;
+
 
  }
 
@@ -35,7 +35,6 @@
 
 li{
   list-style-type: none;
-
 }
 
 .question_name{
@@ -63,10 +62,30 @@ li{
 .answer_table th{
   text-align: right;
 }
-.left-block {
+.left-block a{
   color: tomato;
   text-align: left;
 }
+.left-block {
+  margin-top: 10px;
+  font-size: 18px;
+
+}
+.left-block a:hover{
+  font-weight: bolder;
+}
 .center_me{
   margin-right: 130px;
+}
+.table-specs{
+  border: none;
+
+  background: repeating-linear-gradient(
+    90deg,
+    #ffffff,
+    #e3e3e3
+  );
+}
+
+.monkey{
 }
