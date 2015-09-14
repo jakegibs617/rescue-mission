@@ -3,16 +3,16 @@
     <li class="question_name"><img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="42" width="42"></li>
   <table class="info_table">
   <tr>
-    <th>Title:</th>
-    <td> <%= @question.title %></td>
-  </tr>
-  <tr>
-    <th>Body: </th>
-    <td><%= @question.body %></td>
-  </tr>
-  <tr>
     <th>User:</th>
-    <td><%= @question.asker_name %></td>
+    <td> <%= @question.asker_name %></td>
+  </tr>
+  <tr>
+    <th>Question: </th>
+    <td><%= @question.title %></td>
+  </tr>
+  <tr>
+    <th>Description:</th>
+    <td><%= @question.body %></td>
   </tr>
 
 </table>

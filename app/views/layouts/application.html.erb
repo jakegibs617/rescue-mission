@@ -20,7 +20,10 @@
       </div>
   <body>
       <div class="columns small-10 end">
-        <%= yield %>
+        <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+      <%= yield %>
       </div>
   </body>
     </div>
