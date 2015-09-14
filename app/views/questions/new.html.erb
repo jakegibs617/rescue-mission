@@ -19,7 +19,7 @@
 
 <%= form_for :question, url:{action: "create"} do |f| %>
   <p>
-    <%= f.label :asker_name %><br>
+    <%= f.label "Name" %><br>
     <%= f.text_field :asker_name%>
   </p>
 
@@ -30,7 +30,7 @@
 
   <p>
     <%= f.label :body %><br>
-    <%= f.text_field :body%>
+    <%= f.text_area :body%>
   <p>
 
   <p>

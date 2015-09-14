@@ -1,5 +1,5 @@
 <ul>
-  <li class="question_name"> <%= @question.asker_name %></li>
+  <li class="question_name"> Question:</li>
     <li class="question_name"><img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="42" width="42"></li>
   <table class="info_table">
   <tr>
@@ -18,7 +18,7 @@
 </table>
 </ul>
 
-<ul>
+<ul class= "center_me">
   <a href="/questions/<%= @question.id %>/answers/new">Add a Answer</a><br>
   <a href="/questions/new">Add a New Question</a>
 </ul>

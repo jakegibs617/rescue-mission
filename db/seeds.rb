@@ -4,17 +4,17 @@ if Rails.env.development?
 
 	10.times do
 		Question.create(
-		 asker_name: Faker::Internet.user_name,
-		 body: Faker::Hacker.say_something_smart,
+		 asker_name: Faker::Name.name,
+		 body: Faker::Lorem.paragraph,
 		 title: Faker::Hacker.say_something_smart + "?"
 		 )
 	end
 	80.times do
 		Answer.create(
-		 name: Faker::Internet.user_name,
+		 name: Faker::Name.name,
 		 body: Faker::Hacker.say_something_smart,
 
-		 question_id: Faker::Number.between(1, 5)
+		 question_id: Faker::Number.between(1, 10)
 		 )
 	end
 
