@@ -9,12 +9,12 @@ if Rails.env.development?
 		 title: Faker::Hacker.say_something_smart + "?"
 		 )
 	end
-	80.times do
+	140.times do
 		Answer.create(
 		 name: Faker::Name.name,
 		 body: Faker::Hacker.say_something_smart,
 
-		 question_id: Faker::Number.between(1, 10)
+		 question_id: Faker::Number.between(1, 50)
 		 )
 	end
 

@@ -1,6 +1,7 @@
 
   <li class="question_name"> Question:</li>
   <li class="question_name"><img src="<%= Faker::Avatar.image %>" height="42" width="42"></li>
+  <%= link_to 'Delete', @question, method: :delete %>
 
   <table class="info_table">
     <tr>
