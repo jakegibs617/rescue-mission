@@ -17,7 +17,7 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     @answer.destroy
     flash[:notice] = 'answer deleted.'
-    redirect_to '/questions'
+    redirect_to question_path(@answer.question_id)
   end
 
   private
