@@ -53,14 +53,14 @@
     <div class="large-12 columns" class="mdhtmlform-md">
       <%= "Your Answer" %>
       <%= f.text_area :body, class: 'mdhtmlform-md', value: '#Answer Here' %>
+      <%= f.submit %>
       <br /><br />
       <!-- Display converted html here! -->
+      Markdown:
       <div class="mdhtmlform-html"></div>
       <!-- And insert converted html for submission here... -->
       <textarea class="mdhtmlform-html" style="display: none;"></textarea>
       <br /><br />
-      <%= f.submit %>
-
     </div>
 
   <% end %>
