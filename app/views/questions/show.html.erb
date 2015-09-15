@@ -42,6 +42,7 @@
 
   <% end %>
 
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   <%= form_for([@question, @question.answers.build]) do |f| %>
 
     <div class="large-4 columns">
@@ -49,13 +50,42 @@
       <%= f.text_field :name %>
     </div>
 
-    <div class="large-12 columns">
+    <div class="large-12 columns" class="mdhtmlform-md">
       <%= "Your Answer" %>
-      <%= f.text_area :body %>
+      <%= f.text_area :body, class: 'mdhtmlform-md', value: '#Answer Here' %>
+      <br /><br />
+      <!-- Display converted html here! -->
+      <div class="mdhtmlform-html"></div>
+      <!-- And insert converted html for submission here... -->
+      <textarea class="mdhtmlform-html" style="display: none;"></textarea>
+      <br /><br />
       <%= f.submit %>
+
     </div>
 
   <% end %>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+
+      <!-- mdhtmlform Dependencies -->
+      <script src="js/vendor/showdown.js"></script> <!-- Include Showdown before mdhtmlform! -->
+      <script src="js/mdhtmlform.js"></script> <!-- The main mdhtmlform file -->
+      <!-- end mdhtmlform Dependencies -->
+
+      <script src="js/example.js"></script> <!-- The js for this example -->
+
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src='//www.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+
+
 
 <br>
 <div class="large-12 columns space"> nothing</div>
