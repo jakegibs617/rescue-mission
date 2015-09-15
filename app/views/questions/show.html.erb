@@ -25,6 +25,8 @@
   <table>
       <tr>
         <th><img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="24" width="24"></th>
+      <%= link_to 'Delete', 'questions/answers/' + answer.to_param, method: :delete %>
+      
       </tr>
 
       <tr>
@@ -53,5 +55,6 @@
     </div>
 
   <% end %>
+
 <br>
 <div class="large-12 columns space"> hello</div>

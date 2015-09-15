@@ -13,6 +13,13 @@ class AnswersController < ApplicationController
 
   end
 
+  def destroy
+    @answer = Answer.find(params[:id])
+    @answer.destroy
+    flash[:notice] = 'answer deleted.'
+    redirect_to '/questions'
+  end
+
   private
 
   def answer_params
