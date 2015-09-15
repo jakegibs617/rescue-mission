@@ -1,19 +1,13 @@
-<h3>List of Questions:</h3>
+<h3>Top Questions</h3>
 
 <%- @questions.each do |question| -%>
+<a href="/questions/<%= question.id %>"><%= question.title %></a>
 
-        <td>
-          <a href="/questions/<%= question.id %>"><%= question.title %></a>
-        </td>
   <table>
-    <tbody>
-        <div class="monkey">
-          <%= link_to 'Edit', '/questions/' + question.to_param + '/edit' %>
-          <%= link_to 'Delete', '/questions/' + question.to_param, method: :delete %>
-        </div>
-      <tr>
-      </tr>
-    </tbody>
+    <div>
+      <%= link_to 'Edit', '/questions/' + question.to_param + '/edit' %>
+      <%= link_to 'Delete', '/questions/' + question.to_param, method: :delete %>
+    </div>
   </table>
 
 <%- end -%>

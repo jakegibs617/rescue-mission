@@ -1,15 +1,14 @@
 <%= form_for([@question, @question.answers.build]) do |f| %>
-  <p>
-    <%= f.label "Name" %><br>
+
+  <div class="large-4 columns">
+    <%= "Name" %>
     <%= f.text_field :name %>
-  </p>
+  </div>
 
-  <p>
-    <%= f.label :body %><br>
+  <div class="large-12 columns">
+    <%= "Your Answer" %>
     <%= f.text_area :body %>
-  </p>
-
-  <p>
     <%= f.submit %>
-  </p>
+  </div>
+
 <% end %>
