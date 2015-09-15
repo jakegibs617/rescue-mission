@@ -13,19 +13,23 @@
   </head>
 
   <div class="row">
-    <div class="column">
-      <div class= "columns small-2 left-block">
-        <li><a href="/questions">Questions</a></li>
-        <li><a href="/questions/new">Ask</a></li>
-      </div>
-  <body>
+    <div class= "columns small-2 left-block"> </div>
+
+          <div class="icon-bar side-bar">
+            <a href="/questions">Home</a>
+            <a href="/questions/new">Ask</a>
+          </div>
+
+    <body>
       <div class="columns small-10 end">
         <% flash.each do |key, value| %>
           <div class="alert alert-<%= key %>"><%= value %></div>
         <% end %>
+
+
       <%= yield %>
+
       </div>
-  </body>
-    </div>
+    </body>
   </div>
 </html>
