@@ -6,15 +6,15 @@ RSpec.describe Question do
   let!(:question) { FactoryGirl.create(:question) }
 
     it "should have a name" do
-      expect(question.asker_name).to eq("Bobby")
+      expect(question.asker_name).to eq(question.asker_name)
     end
 
     it "should have a title" do
-      expect(question.title).to eq("How do I do this factory girl stuff and make it work in my tests? Does this work?")
+      expect(question.title).to eq(question.title)
     end
 
     it "should have a description" do
-      expect(question.body).to eq("So I'm working in rails and I have all these errors. Its saying this or that gem worn't work and now I'm just trying to fill in 150 characters for this silly constraint. What else can I say here really???")
+      expect(question.body).to eq(question.body)
     end
   end
 end

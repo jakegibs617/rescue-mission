@@ -6,11 +6,11 @@ RSpec.describe Answer do
   let!(:answer) { FactoryGirl.create(:answer) }
 
     it "should have a name" do
-      expect(answer.name).to eq("Jonny Bravo")
+      expect(answer.name).to eq(answer.name)
     end
 
     it "should have a body" do
-      expect(answer.body).to eq("the beach is over therethe beach is over therethe beach is over therethe beach is over therethe beach is over therethe beach is over therethe beach is over therethe beach is over there")
+      expect(answer.body).to eq(answer.body)
     end
 
   end
