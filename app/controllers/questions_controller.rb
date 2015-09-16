@@ -39,7 +39,12 @@ class QuestionsController < ApplicationController
 
 	  def destroy
 	    @question = Question.find(params[:id])
-	    @question.destroy
+			# @answers = @question.answers
+		  #   @answers.each do |answer|
+		  #     answer.destroy
+		  #   end
+			@question.destroy
+
 	    flash[:notice] = 'question deleted.'
 	    redirect_to '/questions'
 	  end

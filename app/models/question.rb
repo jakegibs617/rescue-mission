@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  has_many :answers
+  has_many :answers, dependent: :destroy
 
   validates :asker_name, presence: true
   validates :body, presence: true, length: { minimum: 150 }
