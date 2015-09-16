@@ -16,16 +16,16 @@
 <%= form_for :question, url:{action: "create"} do |f| %>
 
   <div class="large-4 columns">
-    <%= f.text_field :asker_name, :placeholder => 'Name'  %>
+    <%= f.text_field :asker_name, :placeholder => 'Name', :required => true  %>
   </div>
 
   <div class="large-12 columns">
-   <%= f.text_field :title, :placeholder => 'Title' %>
+   <%= f.text_field :title, :placeholder => 'Title', :required => true %>
  </div>
 
   <div class="large-12 columns">
 
-    <%= f.text_area :body, :placeholder => 'Enter Question' %>
+    <%= f.text_area :body, :placeholder => 'Enter Question', :required => true %>
     <%= f.submit %>
 
   </div>

@@ -6,3 +6,6 @@ $ bundle
 $ rake db:create && rake db:migration && rake db:seed && rails server
 
 This is a simple web page using rails that has a list of questions with associated answers.
+
+run in terminal
+rails g foundation:install
