@@ -1,7 +1,8 @@
 
   <li class="question_name"> Question:</li>
   <li class="question_name"><img src="<%= Faker::Avatar.image %>" height="42" width="42"></li>
-  <%= link_to 'Delete', @question, method: :delete %>
+  <%= link_to 'Delete', question_path, method: :delete %>
+  <%= link_to 'Edit', edit_question_path %>
 
   <table class="info_table">
     <tr>
@@ -26,6 +27,7 @@
   <table>
       <tr>
         <th><img src="<%= Faker::Avatar.image %>" alt="<%=Faker::Company.buzzword%>" height="24" width="24"></th>
+
       <%= link_to 'Delete', 'questions/answers/' + answer.to_param, method: :delete %>
 
       </tr>
@@ -64,27 +66,6 @@
     </div>
 
   <% end %>
-
-
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-      <script src="js/plugins.js"></script>
-
-      <!-- mdhtmlform Dependencies -->
-      <script src="js/vendor/showdown.js"></script> <!-- Include Showdown before mdhtmlform! -->
-      <script src="js/mdhtmlform.js"></script> <!-- The main mdhtmlform file -->
-      <!-- end mdhtmlform Dependencies -->
-
-      <script src="js/example.js"></script> <!-- The js for this example -->
-
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-      <script>
-          var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-          g.src='//www.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
-
 
 
 <br>
