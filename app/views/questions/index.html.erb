@@ -6,7 +6,7 @@
   <table>
     <div>
       <%= link_to 'Edit', '/questions/' + question.to_param + '/edit' %>
-      <%= link_to 'Delete', '/questions/' + question.to_param, method: :delete %>
+      <%= link_to 'Delete', '/questions/' + question.to_param, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   </table>
 
