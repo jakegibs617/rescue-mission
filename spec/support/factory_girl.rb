@@ -11,8 +11,8 @@ FactoryGirl.define do
   factory :question do
     asker_name Faker::Name.name
     sequence :title do |n|
-        "personpersonperson personpersonpersonperson personpersonpersonperson personpersonpersonperson person#{n}@example.com"
-     end
+      Faker::Lorem.paragraph(5, true, 9) + "#{n}"
+    end
     body Faker::Lorem.paragraph(5, true, 9)
   end
 

@@ -49,5 +49,5 @@ gem 'capybara', group: [:development, :test]
 gem 'launchy', group: [:development, :test]
 gem 'factory_girl_rails', group: [:development, :test]
 gem 'valid_attribute', group: [:development, :test]
-gem 'shoulda-matchers', group: [:development, :test], require: false
+gem 'shoulda-matchers', group: [:development, :test]
 gem 'devise'
